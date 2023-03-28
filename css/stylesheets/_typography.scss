@@ -1,0 +1,91 @@
+html {
+	font-size : 100%;
+}
+
+html, body {
+	font-family : $font-family;
+	line-height : 1;
+}
+
+body {
+	font-size : 1rem;
+}
+
+p {
+	font-family : $font-family;
+	font-size   : 1em;
+	line-height : 1.5;
+	margin      : 0 auto 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	display     : block;
+	font-family : $font-family;
+	font-weight : 600;
+	line-height : 1;
+	margin      : 0 auto 1rem;
+	width       : 100%;
+}
+
+blockquote, q, cite {
+	font-family : $font-family;
+	line-height : 1.5;
+	margin      : 0 auto 1rem;
+}
+
+button, .button, [role='button'] {
+	font-family : $font-family;
+	font-size   : 1em;
+	font-weight : 600;
+	line-height : 1;
+}
+
+input, textarea {
+	font-family : $font-family;
+	font-size   : 1em;
+	line-height : 1.5;
+}
+
+select, option, optgroup {
+	font-family : $font-family;
+	font-size   : 1em;
+	line-height : 1;
+}
+
+ul, ol, dl, li, dt, dd {
+	font-family : $font-family;
+	font-size   : inherit;
+	line-height : 1;
+}
+
+figure, figcaption {
+	display     : block;
+	font-family : $font-family;
+	line-height : 1;
+}
+
+table, caption {
+	font-family : $font-family;
+	font-size   : smaller;
+	line-height : 1;
+}
+
+dialog {
+	font-family : $font-family;
+	font-size   : 1em;
+	line-height : 1.5;
+}
+
+small {
+	font-family : $font-family;
+	line-height : inherit;
+}
+
+.lead {
+	font-size : x-large;
+	font-weight : 500;
+	line-height : 1;
+	margin : 0 auto 1rem;
+	display : block;
+	
+}

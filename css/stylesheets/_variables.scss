@@ -1,0 +1,25 @@
+//==============================================================================
+// Variables
+//==============================================================================
+
+//------------------------------------------------------------------------------
+// Typography
+//------------------------------------------------------------------------------
+$system-fontstack : system-ui, -apple-system,
+BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif,
+'Apple Color Emoji', 'Segoe UI Emoji',
+'Segoe UI Symbol', 'Noto Color Emoji';
+/* $main-fontstack: "Inter UI","Inter",Inter,Inter UI; */
+/* $font-family: $main-fontstack,$system-fontstack !default; */
+$font-family      : $system-fontstack;
+
+//------------------------------------------------------------------------------
+// Color
+//------------------------------------------------------------------------------
+
+$default-button-bg : #ededed;
+$default-button-color : #16171b;
+
+$primary-color: #50f;
+$secondary-color: #2f3e4f;

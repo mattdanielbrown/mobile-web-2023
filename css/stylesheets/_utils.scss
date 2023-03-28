@@ -1,0 +1,73 @@
+//==============================================================================
+// Utilities
+//==============================================================================
+
+%list-reset {
+	display         : flex;
+	flex-direction  : column;
+	gap             : 1em;
+	justify-content : flex-start;
+	list-style      : none;
+	margin          : 0;
+	padding         : 0;
+	width           : 100%;
+	li {
+		display    : block;
+		list-style : none;
+		margin     : 0;
+		padding    : 0;
+		width      : 100%;
+		* {
+			margin : 0;
+		}
+	}
+	@media screen and (min-width : 600px) {
+		flex-direction  : row;
+		flex-wrap       : wrap;
+		justify-content : flex-start;
+		li {
+			display : inline-flex;
+			width   : unset;
+		}
+	}
+}
+
+
+%fix-iOS-tap-highlight {
+	appearence                  : none;
+	-webkit-appearence          : none;
+	-moz-appearence             : none;
+	-webkit-tap-highlight-color : rgba(0, 0, 0, 0.0) !important;
+	touch-action: manipulation;
+	user-select : none;
+}
+
+// @extend %fix-iOS-tap-highlight;
+// document.addEventListener("touchstart", function(){}, true);
+
+%visually-hidden {
+	position    : absolute;
+	white-space : nowrap;
+	width       : 1px;
+	height      : 1px;
+	overflow    : hidden;
+	border      : 0;
+	padding     : 0;
+	clip        : rect(0 0 0 0);
+	clip-path   : inset(50%);
+	margin      : -1px;
+}
+
+%container {
+	width : 90%;
+	margin-left : auto;
+	margin-right : auto;
+	max-width : 65ch;
+	@media screen and (min-width: 800px) {
+		max-width : 70ch;
+	}
+	@media screen and (min-width : 1280px) {
+		max-width : 80ch;
+	}
+	
+}
