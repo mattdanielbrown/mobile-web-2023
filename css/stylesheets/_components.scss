@@ -100,6 +100,10 @@ button,.button,[role='button'], [type='button'], [type='reset'], [type='submit']
 	@extend %button;
 }
 
+.button-list {
+	@extend %list-reset;
+}
+
 //------------------------------------------------------------------------------
 // Form Inputs
 //------------------------------------------------------------------------------
@@ -109,4 +113,58 @@ button,.button,[role='button'], [type='button'], [type='reset'], [type='submit']
 [type='week'], input:not([type]), textarea {
 	font-size : 1em;
 	padding   : .5em;
+	display : block;
+	width : 100%;
+	border : 1px lightgray solid;
+	background-color : #fff;
+	line-height : 1.5;
+	border-radius : .25em;
+	outline        : 2px dotted rgba($primary-color, 0.0);
+	outline-offset : 0;
+	transition : color 200ms, background-color 200ms, border-color 200ms,
+	outline-color 200ms, outline-offset 200ms, transform 200ms;
+	
+	&:hover {
+	
+	}
+	&:focus {
+		outline-color: rgba($primary-color,0.75);
+		outline-offset: 2px;
+		border-color: $primary-color !important;
+	}
+}
+::placeholder {
+	color: gray;
+	letter-spacing : .5px;
+}
+label {
+	font-weight : 500;
+	line-height : 1;
+	display : block;
+	margin : 1em auto .25em;
+}
+[type='checkbox'],[type='radio'] {
+	@extend %fix-iOS-tap-highlight;
+	@extend %visually-hidden;
+	& + label {
+		display : block;
+		margin : 1rem auto 1rem .5rem;
+		height: 1.25em;
+		vertical-align : middle;
+		&::before {
+			background-color : #e8e8e8;
+			content: '';
+			width : 1.125em;
+			height: 1.125em;
+			display : inline-block;
+			border-radius : .25em;
+			margin : 0;
+		}
+	}
+}
+[type='checkbox'] {
+
+}
+[type='radio'] {
+
 }

@@ -17,3 +17,25 @@
 		@content;
 	}
 }
+
+@mixin small-breakpoint() {
+	@media screen and (min-width: 600px) {
+		@content;
+	}
+}
+
+@mixin medium-breakpoint() {
+	@media screen and (min-width : 960px) {
+		@content;
+	}
+}
+
+@mixin large-breakpoint() {
+	@media screen and (min-width : 1440px) {
+		@content;
+	}
+}
+
+//------------------------------------------------------------------------------
+//
+//------------------------------------------------------------------------------

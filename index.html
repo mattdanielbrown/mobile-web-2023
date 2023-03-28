@@ -5,7 +5,13 @@
   <meta charset="utf-8">
   <title>Mobile Web 2023 | Home</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+	<!-- Allow web app to be run in full-screen mode. -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- Make the app title different than the page title. -->
+	<meta name="apple-mobile-web-app-title" content="iOS 8 web app">
+	<!-- Configure the status bar. -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
   <meta property="og:title" content="">
   <meta property="og:type" content="">
@@ -60,10 +66,20 @@
 			<h2>Section Title</h2>
 			<p>Here's a <a href="#">Hyperlink</a>.</p>
 			<p>Here are some buttons:</p>
-			<button type="button">Button</button>
-			<button type="button" class="primary">Primary</button>
-			<button type="button" class="secondary">Secondary</button>
+			<ul class="button-list">
+				<li><button type="button">Default</button></li>
+				<li><button type="button" class="primary">Primary</button></li>
+				<li><button type="button" class="secondary">Secondary</button></li>
+				<li><button type="button" class="round">Rounded</button></li>
+				<li><button type="button" class="outline">Outline</button></li>
+				<!-- <li><button type="button" class="round primary">Rounded</button></li> -->
+				<!-- <li><button type="button" class="round secondary">Rounded</button></li> -->
+				<!-- <li><button type="button" class="round outline">Rounded</button></li> -->
+				<!-- <li><button type="button" class="primary outline">Outline</button></li> -->
+				<!-- <li><button type="button" class="secondary outline">Outline</button></li> -->
+			</ul>
 		</section>
+		
 	</main>
 	
 	<!-- ————————————————————————————————————————————————————————————————————— -->
