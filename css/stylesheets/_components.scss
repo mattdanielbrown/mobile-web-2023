@@ -94,12 +94,41 @@
 			border-color     : active-color($_this-color);
 		}
 	}
+	&.round,&.rounded {
+		border-radius : 2rem !important;
+	}
+	&.outline {
+		background-color : transparent;
+		font-weight : 500;
+		letter-spacing : .75px;
+		border-color : $secondary-color;
+		color: $secondary-color;
+		&:hover {
+			background-color : rgba($secondary-color, 0.1);
+			border-color : hover-color($secondary-color);
+			color        : hover-color($secondary-color);
+		}
+		&:focus {
+			background-color : rgba($secondary-color, 0.2);
+			color            : focus-color($secondary-color);
+		}
+		&:active {
+			background-color : rgba($secondary-color, 0.3);
+			border-color     : active-color($secondary-color);
+			color            : active-color($secondary-color);
+		}
+	}
 }
 
 button,.button,[role='button'], [type='button'], [type='reset'], [type='submit'] {
 	@extend %button;
 }
+[type='submit'] {
+	@extend .primary;
+}
+[type='reset'] {
 
+}
 .button-list {
 	@extend %list-reset;
 }
@@ -167,4 +196,148 @@ label {
 }
 [type='radio'] {
 
+}
+
+
+//------------------------------------------------------------------------------
+// Navigation Bar
+//------------------------------------------------------------------------------
+body > header:first-of-type {
+	position : fixed;
+	left : 0;
+	right : 0;
+	top : 0;
+	@media screen and (max-width: 599px) {
+		transition : all 200ms;
+	}
+	@media screen and (min-width : 600px) {
+		position : unset;
+		
+	}
+}
+nav {
+	
+	background-color : $navigation-color;
+	color: white;
+	text-align : right;
+	& > ul {
+		display : flex;
+		flex-direction : column;
+		justify-content : flex-start;
+		
+		text-align : center;
+		gap: 0;
+		background-color : $navigation-color;
+		color            : white;
+		
+		transform : translate3d(0, -100%, 0);
+		height: 0;
+		overflow: hidden;
+		
+		transition: all 200ms;
+		
+		li {
+			transition : all 200ms;
+			margin : 0;
+			background-color : $navigation-color;
+			color            : white;
+			a,a:link,a:any-link {
+				background-color : $navigation-color;
+				color            : white;
+				display : block !important;
+				width : 100% !important;
+				margin : 0;
+				line-height : 1;
+				padding : 1em 0;
+				transition : all 200ms;
+				&::before,&::after {
+					all: unset;
+				}
+				&:hover {
+					background-color : hover-color($navigation-color);
+				}
+				&:focus {
+					background-color : focus-color($navigation-color);
+				}
+				&:active {
+					background-color : active-color($navigation-color);
+				}
+			}
+		}
+	}
+	
+	@media screen and (max-width: 599px) {
+		&.mobile-menu-active {
+			ul {
+				transform: translate3d(0,0,0);
+				height: auto;
+			}
+		}
+	}
+	@media screen and (min-width : 600px) {
+		& > ul {
+			flex-direction : row;
+			justify-content : flex-end;
+			transform: translate3d(0,0,0);
+			height: unset;
+			li {
+				
+				a, a:link, a:any-link {
+					display : inline-block;
+					width : unset;
+					padding : .75em !important;
+					border-radius : 0 !important;
+					vertical-align : middle;
+				}
+			}
+		}
+	}
+	
+}
+nav > ul {
+	@media screen and (min-width : 600px) {
+		width        : 90%;
+		margin       : 0 auto;
+		max-width    : 65ch;
+		transition: none !important;
+		li {
+			transition : none !important;
+		}
+	}
+	@media screen and (min-width : 800px) {
+		max-width : 70ch;
+	}
+	@media screen and (min-width : 1280px) {
+		max-width : 80ch;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Mobile Navigation Menu Button
+//------------------------------------------------------------------------------
+#mobile-navigation-button {
+	
+	width : unset;
+	display : inline-block;
+	line-height : 1;
+	padding : .5em .75em;
+	// position : absolute;
+	// right : 1em;
+	// top : 1em;
+	margin-top : .75rem;
+	margin-right : .5rem;
+	$_this-color: #222;
+	background-color : $_this-color;
+	border-color : $_this-color;
+	color: white;
+	
+	&[aria-expanded='true'] {
+		background-color : #e63212;
+		border-color : #e63212;
+		color: white;
+	}
+	
+	@media screen and (min-width : 600px) {
+		display : none;
+	}
 }
